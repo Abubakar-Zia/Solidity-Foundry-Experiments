@@ -324,16 +324,17 @@ assertTrue(signer != publicKey);
 
 1. **Define the WETH
 
- Interface**
+**Interface**
 
-    - **Purpose:**
-        - The WETH interface defines the contract methods to interact with the Wrapped Ether contract. This example uses a minimal interface focusing on the deposit method.
-    - **Code:**
-    
+- **Purpose:**
+    - The `IWETH` interface defines the contract methods for interacting with the Wrapped Ether (WETH) contract. This example provides a minimal interface with a focus on the `deposit` method and `balanceOf` method.
+
+- **Code:**
+
     ```solidity
     interface IWETH {
         function deposit() external payable;
-        function balanceOf(address) external view returns (uint);
+        function balanceOf(address account) external view returns (uint256);
     }
     ```
 
